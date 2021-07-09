@@ -1,7 +1,9 @@
 package com.example.demo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Ning Baoqi
@@ -16,6 +18,10 @@ public class Test {
         a.add("宁宝琪");
         a.add("最帅");
         String bb="076";
+        Map<String,String> map=new HashMap<>();
+        map.put("1","b");
+        map.put("2","c");
+        System.out.println(map.values());
         System.out.println(String.valueOf(Integer.valueOf(bb)));
            // System.out.println(a.contains("宁宝琪"));
     }

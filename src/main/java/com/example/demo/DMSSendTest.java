@@ -15,7 +15,7 @@ public class DMSSendTest {
 for (int i=0;i<100;i++){
     Thread t = new MyThread();
     pool.execute(t);
-    Thread.currentThread().sleep(500);
+
 }
         // 关闭线程池
         pool.shutdown();
@@ -25,5 +25,10 @@ class MyThread extends Thread {
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName() + "正在执行… …"+ System.currentTimeMillis());
+        try {
+            Thread.currentThread().sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

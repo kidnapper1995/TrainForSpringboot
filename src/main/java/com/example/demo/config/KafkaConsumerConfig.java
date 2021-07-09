@@ -1,6 +1,4 @@
-package com.unicom.config;
-
-import java.util.*;
+package com.example.demo.config;
 
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,7 +9,11 @@ import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.config.KafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Ning Baoqi
@@ -61,6 +63,8 @@ public class KafkaConsumerConfig {
         props.put("value.deserializer", StringDeserializer.class);
         return props;
     }
+
+
 
     /**
      * kafka监听
